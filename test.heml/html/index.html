@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <script>
+        // ページ読み込み時にパスワードを確認
+        const password = prompt("このサイトにアクセスするにはパスワードを入力してください:");
+        if (password !== "your_password") { // パスワードを設定 ("your_password" を変更)
+            alert("パスワードが間違っています。");
+            window.location.href = "https://github.com"; // アクセスを拒否
+        }
+    </script>
+
+    <div class="header">
+        <h1>HTMLのテスト</h1>
+        <p>以下の質問に答えてください。</p>
+    </div>
+    <div class="test">
+        <form id="test-form">
+            <div class="question">
+                <label for="q1">1. テキストを入れるためのHTMLタグを1つ答えなさい。</label><br>
+                <input type="text" id="q1" name="q1" placeholder="例: <〇〇>" required>
+            </div>
+            <div class="question">
+                <label for="q4">2. 別のテキストを入れるためのHTMLタグを1つ答えなさい。</label><br>
+                <input type="text" id="q4" name="q4" placeholder="例: <〇>" required>
+            </div>
+            <div class="question">
+                <label for="q2">3. リンクを作成するためのタグは何ですか？</label><br>
+                <input type="text" id="q2" name="q2" placeholder="例: <〇>" required>
+            </div>
+            <div class="question">
+                <label for="q3">4. 画像を表示するためのタグは何ですか？</label><br>
+                <input type="text" id="q3" name="q3" placeholder="例: <〇〇〇>" required>
+            </div>
+            <button type="button" id="submit-btn">採点する</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
